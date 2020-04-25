@@ -38,4 +38,7 @@ PRODUCT_USES_QCOM_HARDWARE := true
 #SSOS Official tag
 SSOS_BUILD_TYPE := OFFICIAL
 TARGET_FACE_UNLOCK_SUPPORTED := true
-    
+
+# Use 64-bit dex2oat for better dexopt time.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
